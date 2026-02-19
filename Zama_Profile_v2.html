@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zama Jason Ndimande | Profile</title>
+  <style>
+
+    @media print {
+      @page { margin: 0; size: A4 portrait; }
+      html, body { margin: 0; padding: 0; background: #fff; }
+      .page {
+        width: 100% !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        font-size: 11pt !important;
+      }
+      .tl-item, .dd-card, .flow, .quote-box,
+      .pill-row, .edu-item, .skill-item,
+      .section-title, .summary-box, .dd-grid {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      .section-title {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      color-adjust: exact !important;
+    }
+
+    body {
+      background: #dde3ea;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      font-size: 15px;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    /* Screen wrapper — wider than A4 so it doesn't look tiny */
+    .page {
+      width: min(960px, 98vw);
+      margin: 28px auto;
+      background: #fff;
+      box-shadow: 0 6px 40px rgba(0,0,0,0.18);
+      display: grid;
+      grid-template-columns: 260px 1fr;
+    }
+
+    /* ═══════════════════════════════
+       SIDEBAR
+    ═══════════════════════════════ */
+    .sidebar {
+      background: #0f172a !important;
+      color: #e2e8f0;
+      padding: 36px 22px;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    .avatar {
+      width: 90px; height: 90px;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6) !important;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem; font-weight: 700; color: #fff;
+      margin: 0 auto 16px;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    .sidebar-name {
+      text-align: center;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+
+    .sidebar-role {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #60a5fa;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 20px;
+    }
+
+    .s-divider {
+      border: none;
+      border-top: 1px solid #1e3a5f;
+      margin: 16px 0;
+    }
+
+    .s-section-label {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #60a5fa;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .s-contact-item {
+      font-size: 0.82rem;
+      color: #94a3b8;
+      margin-bottom: 6px;
+    }
+    .s-contact-item strong { color: #e2e8f0; }
+
+    /* Skill bars */
+    .skill-item { margin-bottom: 10px; }
+    .skill-label {
+      font-size: 0.8rem;
+      color: #cbd5e1;
+      margin-bottom: 4px;
+    }
+    .skill-bar {
+      height: 5px;
+      background: #1e3a5f !important;
+      border-radius: 3px;
+      overflow: hidden;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    .skill-fill {
+      height: 100%;
+      border-radius: 3px;
+      background: linear-gradient(90deg, #3b82f6, #8b5cf6) !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    .s-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .s-tag {
+      background: #1e293b !important;
+      border: 1px solid #334155;
+      border-radius: 4px;
+      padding: 3px 8px;
+      font-size: 0.72rem;
+      color: #94a3b8;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    .edu-item { margin-bottom: 12px; }
+    .edu-degree { font-size: 0.85rem; font-weight: 700; color: #e2e8f0; }
+    .edu-school { font-size: 0.78rem; color: #60a5fa; }
+    .edu-year   { font-size: 0.72rem; color: #64748b; }
+
+    /* ═══════════════════════════════
+       MAIN CONTENT
+    ═══════════════════════════════ */
+    .main { padding: 36px 30px; }
+
+    .main h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+    .main h1 span { color: #3b82f6; }
+
+    .main-role {
+      font-size: 0.82rem;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+
+    .summary-box {
+      background: #f8fafc !important;
+      border-left: 4px solid #3b82f6;
+      border-radius: 0 8px 8px 0;
+      padding: 12px 16px;
+      font-size: 0.88rem;
+      color: #475569;
+      margin-bottom: 20px;
+      line-height: 1.7;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    .section-title {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #3b82f6;
+      font-weight: 700;
+      margin-top: 20px;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
+    /* Timeline */
+    .tl-item {
+      display: grid;
+      grid-template-columns: 18px 1fr;
+      gap: 0 12px;
+      margin-bottom: 16px;
+    }
+    .tl-dot-col { display: flex; flex-direction: column; align-items: center; }
+    .tl-dot {
+      width: 11px; height: 11px;
+      background: #3b82f6 !important;
+      border-radius: 50%;
+      flex-shrink: 0; margin-top: 5px;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    .tl-line {
+      width: 2px; flex: 1;
+      background: #e2e8f0 !important;
+      margin-top: 4px;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    .tl-item:last-child .tl-line { display: none; }
+
+    .tl-role    { font-weight: 700; font-size: 0.95rem; color: #0f172a; }
+    .tl-company { font-size: 0.85rem; color: #3b82f6; }
+    .tl-period  { font-size: 0.75rem; color: #94a3b8; margin-bottom: 5px; }
+    .tl-points  { padding-left: 14px; }
+    .tl-points li {
+      font-size: 0.82rem;
+      color: #475569;
+      margin-bottom: 2px;
+      list-style: disc;
+    }
+    .tl-para {
+      font-size: 0.82rem;
+      color: #475569;
+      line-height: 1.65;
+    }
+
+    /* Data Delivery section */
+    .dd-intro {
+      font-size: 0.85rem;
+      color: #475569;
+      margin-bottom: 14px;
+      line-height: 1.7;
+    }
+
+    .dd-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .dd-card {
+      border-radius: 6px;
+      padding: 12px 14px;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #10b981;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    .dd-card.eol {
+      border-left-color: #ef4444 !important;
+    }
+    .dd-card-name { font-weight: 700; font-size: 0.88rem; color: #0f172a; }
+    .dd-card-desc { font-size: 0.76rem; color: #64748b; margin-top: 4px; line-height: 1.5; }
+    .dd-card-tech { font-size: 0.7rem; color: #3b82f6; margin-top: 5px; }
+
+    /* Flow diagram */
+    .flow {
+      background: #0f172a !important;
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.78rem;
+      color: #64748b;
+      line-height: 2;
+      margin-bottom: 16px;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    .flow .b { color: #60a5fa; }
+    .flow .g { color: #34d399; }
+    .flow .p { color: #a78bfa; }
+    .flow .y { color: #fbbf24; }
+
+    /* Tech pills */
+    .pill-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+    .pill {
+      background: #eff6ff !important;
+      border: 1px solid #bfdbfe;
+      border-radius: 999px;
+      padding: 3px 12px;
+      font-size: 0.75rem;
+      color: #1d4ed8;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    .pill.dark {
+      background: #f5f3ff !important;
+      border-color: #ddd6fe;
+      color: #6d28d9;
+    }
+    .pill.green {
+      background: #f0fdf4 !important;
+      border-color: #bbf7d0;
+      color: #166534;
+    }
+
+    .quote-box {
+      background: linear-gradient(135deg, #eff6ff, #f5f3ff) !important;
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 0.85rem;
+      color: #1e40af;
+      font-style: italic;
+      line-height: 1.7;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ══ SIDEBAR ══ -->
+  <aside class="sidebar">
+    <div class="avatar">ZN</div>
+    <div class="sidebar-name">Zama Jason<br/>Ndimande</div>
+    <div class="sidebar-role">Software Developer</div>
+
+    <hr class="s-divider"/>
+    <div class="s-section-label">Contact</div>
+    <div class="s-contact-item"><strong>Phone:</strong> 073 590 4108</div>
+    <div class="s-contact-item"><strong>Email:</strong> ndimandezj@gmail.com</div>
+    <div class="s-contact-item"><strong>LinkedIn:</strong> Zamagcwensa Ndimande</div>
+    <div class="s-contact-item"><strong>Location:</strong> Durban</div>
+    <div class="s-contact-item"><strong>Nationality:</strong> South African</div>
+    <div class="s-contact-item"><strong>Driver's License:</strong> Yes</div>
+    <div class="s-contact-item"><strong>Languages:</strong> IsiZulu, English</div>
+
+    <hr class="s-divider"/>
+    <div class="s-section-label">Core Skills</div>
+    <div class="skill-item">
+      <div class="skill-label">C# / .NET</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-label">Apache Kafka / KSQLDB</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-label">SQL Server / Oracle</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-label">Debezium / CDC</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-label">Kubernetes / DevOps</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-label">ASP.NET Core / REST</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+    </div>
+
+    <hr class="s-divider"/>
+    <div class="s-section-label">Tools &amp; Technologies</div>
+    <div class="s-tags">
+      <span class="s-tag">Azure DevOps</span>
+      <span class="s-tag">Git / TFS</span>
+      <span class="s-tag">Octopus Deploy</span>
+      <span class="s-tag">RabbitMQ</span>
+      <span class="s-tag">Angular</span>
+      <span class="s-tag">Bootstrap</span>
+      <span class="s-tag">DevExpress</span>
+      <span class="s-tag">SSRS / SSIS</span>
+      <span class="s-tag">Grafana</span>
+      <span class="s-tag">Kibana</span>
+      <span class="s-tag">Azure Key Vault</span>
+      <span class="s-tag">ArgoCD</span>
+    </div>
+
+    <hr class="s-divider"/>
+    <div class="s-section-label">Education</div>
+    <div class="edu-item">
+      <div class="edu-degree">ND: Information Technology</div>
+      <div class="edu-school">Durban University of Technology</div>
+      <div class="edu-year">2013</div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-degree">Grade 12</div>
+      <div class="edu-school">Sivananda Celukuphiwa Combine School</div>
+      <div class="edu-year">2008</div>
+    </div>
+  </aside>
+
+  <!-- ══ MAIN ══ -->
+  <main class="main">
+
+    <h1>Zama Jason <span>Ndimande</span></h1>
+    <div class="main-role">Software Developer &bull; Platform Data Delivery &bull; Derivco</div>
+
+    <div class="summary-box">
+      Software Developer with over 10 years of experience building and maintaining enterprise systems.
+      Currently part of the Platform Data Delivery team at Derivco, where I design, support, and operate
+      the infrastructure that moves real-time gaming events from SQL Server databases into Apache Kafka
+      and delivers them to the right operators and consumers across a multi-tenant environment.
+    </div>
+
+    <div class="section-title">Work Experience</div>
+
+    <div class="tl-item">
+      <div class="tl-dot-col"><div class="tl-dot"></div><div class="tl-line"></div></div>
+      <div>
+        <div class="tl-role">Software Developer</div>
+        <div class="tl-company">Derivco</div>
+        <div class="tl-period">Mar 2023 &mdash; Present</div>
+        <ul class="tl-points">
+          <li>Build and support .NET applications on the Platform Data Delivery team</li>
+          <li>Manage real-time event pipelines using Kafka, Debezium CDC, KSQLDB, and RabbitMQ</li>
+          <li>Deploy and monitor services via Azure DevOps CI/CD pipelines and Octopus Deploy</li>
+          <li>Perform data analysis and optimise system performance across high-volume event streams</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot-col"><div class="tl-dot"></div><div class="tl-line"></div></div>
+      <div>
+        <div class="tl-role">Senior Software Developer</div>
+        <div class="tl-company">Fruit SA</div>
+        <div class="tl-period">Dec 2021 &mdash; Apr 2022</div>
+        <p class="tl-para">Built and maintained web applications using C#, ASP.NET Core/MVC, and MS SQL Server, with deployments managed through Azure DevOps, Git, and Azure Pipelines.</p>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot-col"><div class="tl-dot"></div><div class="tl-line"></div></div>
+      <div>
+        <div class="tl-role">Senior Software Developer</div>
+        <div class="tl-company">WaveSoft</div>
+        <div class="tl-period">Nov 2020 &mdash; Nov 2021</div>
+        <p class="tl-para">Developed web applications using C#, ASP.NET Core, and MS SQL Server. Integrated third-party REST APIs and worked with messaging technologies including RabbitMQ, Kafka, and Angular for front-end development.</p>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot-col"><div class="tl-dot"></div><div class="tl-line"></div></div>
+      <div>
+        <div class="tl-role">Application Developer</div>
+        <div class="tl-company">Hulamin</div>
+        <div class="tl-period">Aug 2014 &mdash; Oct 2020</div>
+        <p class="tl-para">Developed and maintained desktop and web applications using C#, MS SQL Server, and Oracle over a six-year tenure. Integrated business systems with IBM Maximo via REST APIs, built SSRS reports, optimised SQL queries, and provided support for WCF services.</p>
+      </div>
+    </div>
+
+    <div class="section-title">Current Focus &mdash; Platform Data Delivery at Derivco</div>
+
+    <p class="dd-intro">
+      The Data Delivery team is responsible for moving every in-game event — bets, logins, deposits, and more —
+      from casino databases to the correct consumer systems in real time. Think of it as the highway that ensures
+      the right data reaches the right destination, reliably and at scale.
+    </p>
+
+    <div class="dd-grid">
+      <div class="dd-card">
+        <div class="dd-card-name">CDC / Debezium</div>
+        <div class="dd-card-desc">Reads SQL Server database changes in real time and streams them to Kafka. The main engine replacing all legacy publishing tools.</div>
+        <div class="dd-card-tech">Debezium &bull; Kafka Connect &bull; SQL Server</div>
+      </div>
+      <div class="dd-card">
+        <div class="dd-card-name">Kiongo Service</div>
+        <div class="dd-card-desc">Routes and segments Kafka messages per operator. Ensures Betway only sees Betway data, ITS only sees ITS data — strict tenant isolation.</div>
+        <div class="dd-card-tech">C# &bull; Kafka &bull; Kubernetes &bull; Helm</div>
+      </div>
+      <div class="dd-card">
+        <div class="dd-card-name">Event Streaming API (ESAPI)</div>
+        <div class="dd-card-desc">HTTP interface that lets product teams publish events to Kafka without needing Kafka knowledge. Handles retries and guaranteed delivery.</div>
+        <div class="dd-card-tech">C# &bull; REST &bull; Kafka &bull; SQL</div>
+      </div>
+      <div class="dd-card">
+        <div class="dd-card-name">AutoGooi</div>
+        <div class="dd-card-desc">Manages all Kafka topics, user access, and permissions via version-controlled JSON files in Git.</div>
+        <div class="dd-card-tech">JSON &bull; GitOps &bull; Kafka ACLs</div>
+      </div>
+      <div class="dd-card">
+        <div class="dd-card-name">KSQLSync / KSQLDB</div>
+        <div class="dd-card-desc">Deploys and manages real-time stream processing queries on top of Kafka topics to create derived event streams.</div>
+        <div class="dd-card-tech">KSQLDB &bull; Kafka Streams</div>
+      </div>
+      <div class="dd-card eol">
+        <div class="dd-card-name">DataBro / NSF / CEP <span style="color:#ef4444; font-weight:400;">(Legacy — Being Retired)</span></div>
+        <div class="dd-card-desc">Older CLR-based tools being fully replaced by CDC/Debezium and Kafka-native solutions.</div>
+        <div class="dd-card-tech">C# &bull; RabbitMQ &bull; SQL Server CLR</div>
+      </div>
+    </div>
+
+
+    <div class="section-title">Tech Stack</div>
+    <div class="pill-row">
+      <span class="pill">C# / .NET</span>
+      <span class="pill">Apache Kafka</span>
+      <span class="pill">Debezium</span>
+      <span class="pill">Kafka Connect</span>
+      <span class="pill">KSQLDB</span>
+      <span class="pill">SQL Server</span>
+      <span class="pill dark">Kubernetes</span>
+      <span class="pill dark">ArgoCD + Gitea</span>
+      <span class="pill dark">Azure DevOps</span>
+      <span class="pill dark">Octopus Deploy</span>
+      <span class="pill green">Grafana</span>
+      <span class="pill green">Prometheus</span>
+      <span class="pill green">Elastic APM</span>
+      <span class="pill green">Azure Key Vault</span>
+      <span class="pill">RabbitMQ</span>
+      <span class="pill">ASP.NET Core</span>
+      <span class="pill">REST APIs</span>
+    </div>
+
+    <div class="quote-box">
+      "We are the pipe that takes every bet, registration, deposit, and login from the gaming servers
+      and delivers the right event to the right system in real time — powered by CDC/Debezium,
+      Apache Kafka, and Kiongo for routing and isolation."
+    </div>
+
+  </main>
+</div>
+</body>
+</html>
