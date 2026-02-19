@@ -3,8 +3,93 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Zama Jason Ndimande | Profile </title>
+  <title>Zama Jason Ndimande | Profile</title>
   <style>
+
+    /* ═══════════════════════════════
+       MOBILE
+    ═══════════════════════════════ */
+    @media (max-width: 700px) {
+      body { background: #fff; }
+
+      .page {
+        width: 100%;
+        margin: 0;
+        grid-template-columns: 1fr;
+        box-shadow: none;
+      }
+
+      /* Sidebar becomes a compact header strip */
+      .sidebar {
+        padding: 24px 20px;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0 16px;
+        align-items: start;
+      }
+
+      .avatar {
+        width: 64px; height: 64px;
+        font-size: 1.4rem;
+        margin: 0;
+        grid-row: 1 / 3;
+      }
+
+      .sidebar-name {
+        text-align: left;
+        font-size: 1.1rem;
+        margin-bottom: 2px;
+      }
+
+      .sidebar-role {
+        text-align: left;
+        margin-bottom: 0;
+        font-size: 0.7rem;
+      }
+
+      /* Contact, skills, tools, edu go full width below the header strip */
+      .s-divider,
+      .s-section-label,
+      .s-contact-item,
+      .skill-item,
+      .s-tags,
+      .edu-item {
+        grid-column: 1 / -1;
+      }
+
+      .s-divider { margin: 14px 0 10px; }
+
+      /* Contact: show as a 2-col grid on mobile */
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4px 12px;
+      }
+
+      .s-contact-item { margin-bottom: 0; }
+
+      /* Skills: 2 columns side by side */
+      .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px 16px;
+      }
+      .skill-item { margin-bottom: 0; }
+
+      /* Main content */
+      .main {
+        padding: 24px 20px;
+      }
+
+      .main h1 { font-size: 1.6rem; }
+
+      /* DD cards: single column on mobile */
+      .dd-grid {
+        grid-template-columns: 1fr;
+      }
+
+      /* Pills wrap fine already */
+    }
 
     @media print {
       @page { margin: 0; size: A4 portrait; }
@@ -340,39 +425,43 @@
 
     <hr class="s-divider"/>
     <div class="s-section-label">Contact</div>
-    <div class="s-contact-item"><strong>Phone:</strong> 073 590 4108</div>
-    <div class="s-contact-item"><strong>Email:</strong> ndimandezj@gmail.com</div>
-    <div class="s-contact-item"><strong>LinkedIn:</strong> Zamagcwensa Ndimande</div>
-    <div class="s-contact-item"><strong>Location:</strong> Durban</div>
-    <div class="s-contact-item"><strong>Nationality:</strong> South African</div>
-    <div class="s-contact-item"><strong>Driver's License:</strong> Yes</div>
-    <div class="s-contact-item"><strong>Languages:</strong> IsiZulu, English</div>
+    <div class="contact-grid">
+      <div class="s-contact-item"><strong>Phone:</strong> 073 590 4108</div>
+      <div class="s-contact-item"><strong>Email:</strong> ndimandezj@gmail.com</div>
+      <div class="s-contact-item"><strong>LinkedIn:</strong> Zamagcwensa Ndimande</div>
+      <div class="s-contact-item"><strong>Location:</strong> Durban</div>
+      <div class="s-contact-item"><strong>Nationality:</strong> South African</div>
+      <div class="s-contact-item"><strong>Driver's License:</strong> Yes</div>
+      <div class="s-contact-item"><strong>Languages:</strong> IsiZulu, English</div>
+    </div>
 
     <hr class="s-divider"/>
     <div class="s-section-label">Core Skills</div>
-    <div class="skill-item">
-      <div class="skill-label">C# / .NET</div>
-      <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-label">Apache Kafka / KSQLDB</div>
-      <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-label">SQL Server / Oracle</div>
-      <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-label">Debezium / CDC</div>
-      <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-label">Kubernetes / DevOps</div>
-      <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-label">ASP.NET Core / REST</div>
-      <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+    <div class="skills-grid">
+      <div class="skill-item">
+        <div class="skill-label">C# / .NET</div>
+        <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">Apache Kafka / KSQLDB</div>
+        <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">SQL Server / Oracle</div>
+        <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">Debezium / CDC</div>
+        <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">Kubernetes / DevOps</div>
+        <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">ASP.NET Core / REST</div>
+        <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+      </div>
     </div>
 
     <hr class="s-divider"/>
